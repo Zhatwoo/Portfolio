@@ -39,7 +39,7 @@ export default function PersonalInfo() {
         <InfoRow
           icon={<Briefcase className="w-5 h-5 text-blue-300" />}
           label="Profession"
-          value="Computer Engineer"
+          value="Computer Engineer | Forex Trader"
         />
       </dl>
     </section>

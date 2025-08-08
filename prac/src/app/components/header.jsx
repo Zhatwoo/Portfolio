@@ -46,7 +46,7 @@ export default function Header() {
                 isScrolled ? "text-xs" : "text-sm"
               }`}
             >
-              Computer Engineer | Full-Stack Web Developer
+              Computer Engineer 
             </p>
           </div>
         </div>

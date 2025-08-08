@@ -7,14 +7,14 @@ export default function PersonalInfo() {
                  bg-gradient-to-br from-black via-[#0f172a] to-black 
                  text-white shadow-xl rounded-2xl 
                  border border-gray-700 
-                 mt-15 mb-15 transition-all duration-300" // ✅ ADDED `mt-24` here
+                 mt-15 mb-15 transition-all duration-500 ease-in-out"
     >
-      {/* 🔹 Heading made larger and spaced more */}
+      {/* 🔹 Heading */}
       <h2 className="text-4xl font-bold text-white mb-12 text-center tracking-tight">
         Personal Information
       </h2>
 
-      {/* 🔹 Grid spacing increased for a more open feel */}
+      {/* 🔹 Grid */}
       <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-10 text-sm">
         <InfoRow
           icon={<User className="w-5 h-5 text-blue-300" />}
@@ -51,10 +51,14 @@ function InfoRow({ icon, label, value }) {
     <div
       className="flex items-start space-x-4 
                  border border-[#1e293b] rounded-xl 
-                 p-4 bg-[#0f172a]/30"
+                 p-4 bg-[#0f172a]/30 
+                 transform transition-all duration-500 ease-in-out  /* 🆕 Slower & smoother */
+                 hover:scale-[1.03] hover:shadow-xl hover:border-blue-400/40 hover:bg-[#1e293b]/50"
     >
-      {/* 🔹 Background added for icon container */}
-      <div className="p-2 bg-[#1e293b] rounded-full shadow">
+      {/* 🆕 Smooth hover for icon */}
+      <div className="p-2 bg-[#1e293b] rounded-full shadow-md 
+                      transition-colors duration-500 ease-in-out 
+                      hover:bg-blue-500 hover:shadow-blue-400/50">
         {icon}
       </div>
       <div>

@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./components/header";
 import Footer from "./components/footer";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,14 +21,27 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      {/* 🆕 Remove Tailwind gradient — let globals.css handle background */}
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         <Header />
-        {children}
+
+        {/* 🆕 Glass panel for children */}
+        <main
+          className="px-6 py-10 
+                     max-w-6xl mx-auto
+                     bg-white/5 backdrop-blur-lg 
+                     rounded-2xl shadow-2xl
+                     border border-white/10
+                     min-h-[80vh] 
+                     text-white"
+        >
+          {children}
+        </main>
+
         <Footer />
       </body>
-
     </html>
   );
 }

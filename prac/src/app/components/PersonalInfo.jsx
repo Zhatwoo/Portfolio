@@ -29,7 +29,7 @@ export default function PersonalInfo() {
         <InfoRow
           icon={<Phone className="w-5 h-5 text-blue-300" />}
           label="Contact Number"
-          value="+63 9457 738 411"
+          value="09457 738 411"
         />
         <InfoRow
           icon={<MapPin className="w-5 h-5 text-blue-300" />}

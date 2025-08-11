@@ -1,13 +1,65 @@
 @import "tailwindcss";
 
+/* === Global Base Styles === */
 body {
-    background: radial-gradient(circle at center, #1e3a8a 0%, #0f172a 80%);
-    color: #e0e7ff;
-    /* light text for contrast */
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background: radial-gradient(circle at center, #1e3a8a 0%, #0f172a 80%);
+  color: #e0e7ff;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+/* === Floating Animations === */
+@keyframes float-slow {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-25px) translateX(15px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+@keyframes float-fast {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-12px) translateX(-10px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+@keyframes rotate-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* === Animation Utilities === */
+.animate-float-slow {
+  animation: float-slow 10s ease-in-out infinite;
+}
+
+.animate-float-fast {
+  animation: float-fast 5s ease-in-out infinite;
+}
+
+.animate-rotate-slow {
+  animation: rotate-slow 20s linear infinite;
+}
+
+/* === Shape Styling for Floating Background === */
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.shape-blue {
+  background-color: #3b82f6; /* Tailwind's blue-500 */
+}
+
+.shape-purple {
+  background-color: #8b5cf6; /* Tailwind's purple-500 */
+}
+
+.shape-pink {
+  background-color: #ec4899; /* Tailwind's pink-500 */
 }

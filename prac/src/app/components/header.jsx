@@ -62,7 +62,7 @@ export default function Header() {
             onClick={(e) => handleSmoothScroll(e, "#contact")}
             className="hover:text-white transition-colors duration-200"
           >
-            Get in Touch (WIP)
+            Get in Touch 
           </a>
         </nav>
       </div>

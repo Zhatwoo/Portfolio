@@ -29,16 +29,16 @@ export default function Hero() {
             Neo Dela Torre
           </h1>
           <p className="text-lg text-gray-300 mb-6 max-w-xl">
-            Computer Engineering Graduate | Trader  
-            Passionate about technology, software development, and market analysis.  
-            I aim to bridge innovation and financial strategies to create impactful solutions.
+          Computer Engineering Graduate & Forex Trader
+          Driven by technology and market insights to build smart software and deliver strategic financial solutions.
+          Bridging innovation with practical impact.
           </p>
 
           {/* Goals */}
           <ul className="space-y-3 text-gray-300">
-            <li>💻 Develop innovative software and embedded systems.</li>
-            <li>📈 Apply data-driven strategies in trading and investments.</li>
-            <li>🌏 Contribute to tech solutions that help communities.</li>
+            <li>💻 Create cutting-edge software and embedded systems that solve real problems.</li>
+            <li>📈 Leverage data-driven insights to optimize trading and investment strategies.</li>
+            <li>🌏 Build technology that empowers communities and drives positive change.</li>
           </ul>
         </div>
       </div>
